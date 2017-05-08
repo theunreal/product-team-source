@@ -1,6 +1,6 @@
 
 <div class="thumbnail img-circle"
-[style.background]="member.strokeColor">
+[style.background]="defaultColor">
 
 <img [src]="member.avatar" #img
  class="img img-circle img-responsive member"
@@ -8,6 +8,8 @@
  [class.colored]="member.isLoggedIn"
  (mouseenter)="colored=true"
  (mouseleave)="colored=false"
+ (load)="defaultColor=member.strokeColor;entrance='loaded'"
+ [@memberEntrance]="entrance"
  />
 
  <div class="caption" *ngIf="member.isLoggedIn">
@@ -17,4 +19,5 @@
     <br />
     HERE
  </div>
+
  </div>

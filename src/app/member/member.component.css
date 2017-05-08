@@ -12,7 +12,7 @@ The background color is dynamic! Awesome!
   margin-bottom:15px;
   max-height:250px;
   position:relative;
-  padding:3px;
+  padding:4px; /** Stroke size */
 }
 
 /**

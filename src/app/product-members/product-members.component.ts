@@ -1,7 +1,5 @@
 //Angular libs
 import { Component, OnInit } from '@angular/core';
-import { trigger,state,style,animate,transition,keyframes }
- from '@angular/animations';
 import {MdDialog} from '@angular/material';
 // Our member interface
 import { Member } from '../member';
@@ -14,18 +12,7 @@ import { ViewMemberComponent } from '../view-member/view-member.component';
   selector: 'product-members',
   templateUrl: './product-members.component.html',
   styleUrls: ['./product-members.component.css'],
-  animations: [
-    /** Nice animation for members on page load */
-  trigger('memberEntrance', [
-    state('in', style({transform: 'translateX(0)'})),
-    transition('void => *', [
-      animate(300, keyframes([
-        style({opacity: 0, transform: 'translateX(-100%) scale(0.5)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px) scale(1.1)',  offset: 0.3}),
-        style({opacity: 1, transform: 'translateX(0) scale(1)',     offset: 1.0})
-      ]))
-    ]),
-])]
+
 })
 export class ProductMembersComponent implements OnInit {
 
