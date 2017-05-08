@@ -1,0 +1,41 @@
+/**
+Used for image stroke / logged in background
+The background color is dynamic! Awesome!
+*/
+.thumbnail {
+  position:relative;
+  margin-left:5px;
+  cursor: pointer;
+}
+
+.member {
+  margin-bottom:15px;
+  max-height:250px;
+  position:relative;
+  padding:3px;
+}
+
+/**
+Assigned when the user is away
+*/
+.greyscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(100%);
+}
+
+.caption {
+  position:absolute;
+  top:35%;
+  font-size:20px;
+  text-align: center;
+  width: 95%;
+  color:white;
+  text-shadow: 1px 1px #000;
+}
+
+/**
+Assigned when the user is logged in
+*/
+.colored {
+  opacity:0.6;
+}

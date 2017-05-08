@@ -1,0 +1,20 @@
+
+<div class="thumbnail img-circle"
+[style.background]="member.strokeColor">
+
+<img [src]="member.avatar" #img
+ class="img img-circle img-responsive member"
+ [class.greyscale]="!member.isLoggedIn && !colored"
+ [class.colored]="member.isLoggedIn"
+ (mouseenter)="colored=true"
+ (mouseleave)="colored=false"
+ />
+
+ <div class="caption" *ngIf="member.isLoggedIn">
+   {{member.name | uppercase}}
+   <br />
+    IS
+    <br />
+    HERE
+ </div>
+ </div>

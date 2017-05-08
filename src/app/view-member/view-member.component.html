@@ -1,0 +1,32 @@
+<!-- Our member image should appear here, too! -->
+<member [member]="member"
+(click)="changeState()"></member>
+
+<!-- Captions before the user logged in / logged out -->
+<section *ngIf="!action else didAct" [@textChange]
+ (@textChange.done)="showText($event)">
+
+<!-- Sign in -->
+<div *ngIf="!member.isLoggedIn else logOutMsg">
+  <h2>Hi {{member.name}}! Signing in?<br />
+  <small>Click your photo to confirm</small></h2>
+</div>
+
+<!-- Sign out -->
+<ng-template #logOutMsg>
+  <h2>Hi {{member.name}}! Signing out?<br />
+  <small>Click your photo to confirm</small></h2>
+</ng-template>
+
+</section>
+
+<!-- Captions AFTER the user logged in / logged out -->
+<ng-template #didAct>
+
+  <h2 *ngIf="member.isLoggedIn && switchText"
+   [@textChange]>Have a nice day!</h2>
+
+  <h2 *ngIf="!member.isLoggedIn && switchText"
+   [@textChange]>Bye! See you soon!</h2>
+   
+</ng-template>

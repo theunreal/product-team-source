@@ -1,0 +1,13 @@
+<h1>{{'Our Product Team' | uppercase}}</h1>
+
+<div class="container">
+<section *ngFor="let member of members;">
+
+  <member *ngIf="member.visible"
+  [member]="member"
+  class="col-xs-3"
+  (click)="viewMember(member)"
+  [@memberEntrance]></member>
+
+</section>
+</div>
